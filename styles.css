@@ -1,0 +1,53 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+} /* this solved header and main content overlapping (idk why tho)*/
+
+body {
+    width: 100%;
+    height: 100vh; /* vh stands for viewport height, it simply is the currently visible section "view height" ;) */
+    margin: 0; /* some browsers add horizontal margins, making the page horizontally scrollable, bad! set them to 0! */
+    background-color: #12171a; /* maybe change this to just background, since it accepts images arguments, play! */
+    color: #99b898; /* somehow it's obvious that this is referred to text, so text color! (white now :) */
+    font-family: Helvetica;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    position: fixed;
+    width: 100vw;
+    background-color: #2a363b;
+    padding-bottom: 1px;
+}
+
+.header-h1 {
+    display: flex;
+    justify-content: center;
+    color: #d48443
+}
+
+.header-h2 {
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    color: #a07a5b
+}
+
+.cat-box {
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.cat-image {
+    margin: 20px auto;
+    width: 500px;
+    height: 500px;
+    background-color: #03131a;
+}
