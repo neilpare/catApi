@@ -1,7 +1,6 @@
 # catApi
 
 blablabla
-babbo
 
 yeeeeeees
 
