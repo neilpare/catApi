@@ -1,7 +1,7 @@
 'use strict';
 
 
-// COMMENTO CONFLICT
+// COMMENTO SUPER CONFLICT / ADDIOS
 
 
 /**
