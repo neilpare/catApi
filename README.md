@@ -1,7 +1,6 @@
 # catApi
 
-blablabla BLA
-babbo mamma
+blablabla
 
 yeeeeeees
 
