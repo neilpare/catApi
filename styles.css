@@ -40,6 +40,12 @@ header {
     color: #a07a5b
 }
 
+article {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
 .cat-box {
     padding: 60px;
     margin-top: 1px;
