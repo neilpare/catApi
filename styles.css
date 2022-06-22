@@ -31,14 +31,14 @@ header {
 .header-h1 {
     display: flex;
     justify-content: center;
-    color: #d48443
+    color: #ff9538;
 }
 
 .header-h2 {
     display: flex;
     justify-content: center;
     font-size: small;
-    color: #a07a5b
+    color: #d48443
 }
 
 .cat-widget {
