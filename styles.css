@@ -1,6 +1,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 html {
@@ -40,43 +41,56 @@ header {
     color: #a07a5b
 }
 
-article {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+.cat-widget {
+    margin-top: 120px;
 }
 
 .cat-box {
-    padding: 60px;
-    margin-top: 1px;
-    padding-top: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .cat-image {
-    margin: 20px;
     width: 500px;
     height: 500px;
     background-color: #03131a;
-    grid-area: 2 / 2 / span 4 / span 4;
 }
 
 .cat-button {
-    grid-area: 5 / 3;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.button {
-    margin: 20px;
+#widget-settings {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #ff9538; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+
+    /* margin: 20px;
     padding: 1px;
     width: auto;
     height: auto;
     background-color: #ffe3ca;
     border: 2px solid black;
     color: black;
-    transition-duration: 0.3s;
+    transition-duration: 0.3s; */
 }
 
-.button:hover {
-    background-color: #ff9538;
-    border: 2px solid black;
-    color: white;
+button:hover {
+    background-color: #4CAF50;
+    border: 2px solid white;
 }
+
