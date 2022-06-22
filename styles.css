@@ -45,6 +45,7 @@ header {
     margin-top: 1px;
     padding-top: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -53,4 +54,21 @@ header {
     width: 500px;
     height: 500px;
     background-color: #03131a;
+}
+
+.button {
+    margin: 20px;
+    padding: 1px;
+    width: auto;
+    height: auto;
+    background-color: #ffe3ca;
+    border: 2px solid black;
+    color: black;
+    transition-duration: 0.3s;
+}
+
+.button:hover {
+    background-color: #ff9538;
+    border: 2px solid black;
+    color: white;
 }
