@@ -37,9 +37,6 @@ async function getCatUrlsFromAPI() {
 }
 
 
-
-
-
 /**
  * Throws if input is not a number.
  * @param {integer} listLength - the length of the list
@@ -70,9 +67,25 @@ async function getRandomCatPic() {
   return pic;
 }
 
-
-function loadCatImage(url) {
-  const imageToAppend = document.createElement('img');
-  imageToAppend.src = url;
-  document.querySelector('#cat-image').appendChild(imageToAppend);
+/**
+ * Appends an <img> tag to the predefined #cat-image div
+ * @param {string} url - A url of a cat image
+ */
+ function loadCatImage(url) {
+  getRandomCatPic().then(url => {
+    const imageToAppend = document.createElement('img');
+    imageToAppend.src = url;
+    document.querySelector('#cat-image').appendChild(imageToAppend);
+  });
 }
+
+/**
+ * Changes the background of an element with a random cat image
+ * @param {string} id - the id of the element, prefixed with '#'
+ */
+ function loadCatImageAsBackground(id) {
+  getRandomCatPic().then(url => {
+    document.querySelector(id).style.backgroundImage = url;
+  });
+}
+
