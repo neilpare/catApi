@@ -50,9 +50,6 @@ article {
     padding: 60px;
     margin-top: 1px;
     padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .cat-image {
@@ -60,6 +57,11 @@ article {
     width: 500px;
     height: 500px;
     background-color: #03131a;
+    grid-area: 2 / 2 / span 4 / span 4;
+}
+
+.cat-button {
+    grid-area: 5 / 3;
 }
 
 .button {
