@@ -57,8 +57,6 @@ function getRandomIndex(listLength) {
 
 
 
-// TODO it doesn't work around here on
-
 /**
  * 
  * @returns A string with the URL of a random picture
@@ -72,8 +70,9 @@ async function getRandomCatPic() {
   return pic;
 }
 
-console.log('random pic:', getRandomCatPic());
 
-const imageToAppend = document.createElement('img');
-imageToAppend.src = getRandomCatPic();
-document.querySelector('body').appendChild(imageToAppend);
+function loadCatImage(url) {
+  const imageToAppend = document.createElement('img');
+  imageToAppend.src = url;
+  document.querySelector('#cat-image').appendChild(imageToAppend);
+}
