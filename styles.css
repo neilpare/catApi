@@ -57,6 +57,7 @@ header {
     width: 500px;
     height: 500px;
     background-color: #03131a;
+    border: 3px solid #03131a;
 }
 
 img {

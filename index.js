@@ -72,7 +72,7 @@ async function getRandomCatPic() {
  */
  function loadCatImage() {
   getRandomCatPic().then(url => {
-    const img = document.querySelector('#image-to-load');
+    const img = document.querySelector('#cat-image');
     img.src = url;
     // TODO make alt attribute dynamic according to what comes from the API call
   });
@@ -88,3 +88,6 @@ async function getRandomCatPic() {
   });
 }
 
+
+
+loadCatImage();
