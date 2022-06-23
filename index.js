@@ -69,13 +69,12 @@ async function getRandomCatPic() {
 
 /**
  * Appends an <img> tag to the predefined #cat-image div
- * @param {string} url - A url of a cat image
  */
- function loadCatImage(url) {
+ function loadCatImage() {
   getRandomCatPic().then(url => {
-    const imageToAppend = document.createElement('img');
-    imageToAppend.src = url;
-    document.querySelector('#cat-image').appendChild(imageToAppend);
+    const img = document.querySelector('#image-to-load');
+    img.src = url;
+    // TODO make alt attribute dynamic according to what comes from the API call
   });
 }
 
