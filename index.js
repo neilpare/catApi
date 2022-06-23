@@ -2,7 +2,9 @@
 
 const CONFIG = {
   API_KEY: '29874897-d929-49e8-8b94-30c96a448686',
-  MAX_PICS_PER_QUERY: 10
+  MAX_PICS_PER_QUERY: 10,
+  MAX_URLS_TO_PRELOAD: 100,
+  LOADED_IMAGES: 0
 }
 
 
@@ -11,6 +13,7 @@ const CONFIG = {
  * @returns an array of of urls of length "CONFIG.MAX_PICS_PER_QUERY"
  */
 async function getCatUrlsFromAPI() {
+  console.log('Started API call...');
 
   const response = await fetch(`https://api.thecatapi.com/v1/images/search?limit=${CONFIG.MAX_PICS_PER_QUERY}`
   // , {
@@ -30,9 +33,9 @@ async function getCatUrlsFromAPI() {
 
   // response.json() is going to be an array
   let urlList = await response.json()//.map(obj => obj.url);
-  console.log(urlList);
+  // console.log(urlList);
   urlList = urlList.map(obj => obj.url);
-  console.log(urlList);
+  console.log('urlList retrieved: ', urlList);
   return urlList;
 }
 
@@ -59,11 +62,8 @@ function getRandomIndex(listLength) {
  * @returns A string with the URL of a random picture
  */
 async function getRandomCatPic() {
-  console.log('first')
   const urls = await getCatUrlsFromAPI();
-  console.log('after', urls.length, getRandomIndex(urls.length));
   const pic = urls[getRandomIndex(urls.length)];
-  console.log('pic:', pic);
   return pic;
 }
 
@@ -74,6 +74,8 @@ async function getRandomCatPic() {
   getRandomCatPic().then(url => {
     const img = document.querySelector('#cat-image');
     img.src = url;
+    CONFIG.LOADED_IMAGES++;
+    console.log('image loaded', CONFIG.LOADED_IMAGES);
     // TODO make alt attribute dynamic according to what comes from the API call
   });
 }
