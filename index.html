@@ -16,10 +16,13 @@
         </header>
 
         <article class="cat-widget">
+            <!-- IMPORTANT: id 'cat-box' is a hook in index.js. If changed, please update CONFIG object -->
             <div class="cat-box">
+                <!-- IMPORTANT: index.js assumes there will always be an <img> tag with id 'cat-image'.
+                    Please note that id and class for this tag are also declared in index.js > CONFIG obj. -->
                 <img id="cat-image" class="cat-image" src="" alt="a random image of a cat" />
 
-                <button id="get-image-button" class="cat-button" type="button" onclick="loadCatImage()">Give Cat!</button>
+                <button id="get-image-button" class="cat-button" type="button" onclick="loadNewCatImage()">Give Cat!</button>
 
                 <div id="widget-settings">
                     <input type="checkbox" id="auto-copy image url"/>
