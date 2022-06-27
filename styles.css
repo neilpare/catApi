@@ -19,6 +19,8 @@ body {
 }
 
 header {
+    z-index: 1;
+    display: inline-block;
     position: sticky;
     top: 0px;
     position: fixed;
@@ -54,6 +56,11 @@ article.cat-widget {
     flex-direction: column;
 }
 
+
+#cat-image-box {
+    position: relative;
+}
+
 #copy-button {
     position: absolute;
     right: 10px;
@@ -63,7 +70,7 @@ article.cat-widget {
     height: 50px;
     border-radius: 7px;
     border: none;
-    background-image: url(http://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/copy-icon.png);
+    background-image: url("assets/copy-icon.png");
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
@@ -79,16 +86,11 @@ article.cat-widget {
 #copy-button:active {
     background-color: #3ddb42;
     border: 2px solid white;
-    background-image: url(https://icons.iconarchive.com/icons/praveen/minimal-outline/512/check-icon.png);
+    background-image: url("assets/check-icon.png");
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
 }
-
-#cat-image-box {
-    position: relative;
-}
-
 
 .cat-image {
     width: 500px;
