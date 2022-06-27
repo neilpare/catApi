@@ -85,6 +85,35 @@ function loadNewCatImage() {
   getCatUrlsFromAPI(1).then(urlList => preloadImages(urlList));
 }
 
+/**
+ * This should be invoked by the button "copy to clipboard"
+ */
+function invokeCopyToClipBoard() {
+  const url = document.querySelector('#cat-image').src;
+  copyTextToClipBoard(url);
+}
+
+/**
+ * @param {string} text - the text to copy to the clipboard
+ */
+function copyTextToClipBoard(text) {
+  navigator.clipboard.writeText(text).then(
+    // On success
+    () => alert('Url of image copied to clipboard')
+  , 
+    // On failure
+    () => alert('There was an error copying url to clipboard')
+  );
+
+}
+
+
+
+
+
+
+
+
 
 
 
