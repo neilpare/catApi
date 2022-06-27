@@ -105,7 +105,7 @@ article.cat-widget {
 }
 
 /* the tooltip is designed as it should here, then the display property is set to none to make it hidden */
-/* margins are the magic to make it appear out of its direct parent #copy-button */
+/* margins are the magic to make it appear outside of its direct parent #copy-button */
 .tooltip {
     display: none;
     border-radius: 7px;
