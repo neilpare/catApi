@@ -98,7 +98,7 @@ article.cat-widget {
 #copy-button:active {
     background-color: #3ddb42;
     border: 2px solid white;
-    background-image: url("assets/check-icon.png");
+    /* background-image: url("assets/check-icon.png"); */
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
