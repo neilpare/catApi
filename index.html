@@ -21,7 +21,8 @@
                     <!-- JS expects cat-image id to display image, id and class declared also in CONFIG -->
                     <img id="cat-image" class="cat-image" src="" alt="a random image of a cat" />
                     <div id="copy-button" type="button" onclick="invokeCopyToClipBoard()">
-                        <div class="tooltip">Click to Copy the Image URL!</div>
+                        <div class="tooltip" id="tooltip-hover">Click to Copy the Image URL!</div>
+                        <div class="tooltip" id="tooltip-active">Link copied to Clipboard!</div>
                     </div>
                 </div>
                 <button id="get-image-button" class="cat-button" type="button" onclick="loadNewCatImage()">Give Cat!</button>

@@ -88,7 +88,7 @@ article.cat-widget {
     z-index: 1;
 }
 
-#copy-button:hover > .tooltip {
+#copy-button:hover > #tooltip-hover {
     display: flex;
     justify-content: center;
     align-items: center;
