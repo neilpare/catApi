@@ -47,18 +47,56 @@ article.cat-widget {
 
 .cat-box {
     margin-top: 50px;
+    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+#copy-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    background-image: url(http://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/copy-icon.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: #ffa352;
+}
+
+#copy-button:hover {
+    background-color: #4CAF50;
+    border: 2px solid white;
+}
+
+#copy-button:active {
+    background-color: #3ddb42;
+    border: 2px solid white;
+    background-image: url(https://icons.iconarchive.com/icons/praveen/minimal-outline/512/check-icon.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: 2s;
+}
+
+#cat-image-box {
+    position: relative;
+}
+
+
 .cat-image {
     width: 500px;
     height: 500px;
     background-color: #03131a;
-    /* border: 3px solid #03131a; */
     padding: 5px;
+    border-radius: 9px;
 }
 
 img {
@@ -70,10 +108,11 @@ img {
 }
 
 .cat-button {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 9px;
 }
 
 #widget-settings {
@@ -81,7 +120,7 @@ img {
 }
 
 button {
-    background-color: #ff9538; /* Green */
+    background-color: #ff9538;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -92,6 +131,11 @@ button {
 
 button:hover {
     background-color: #4CAF50;
+    border: 2px solid white;
+}
+
+button:active {
+    background-color: #3ddb42;
     border: 2px solid white;
 }
 
