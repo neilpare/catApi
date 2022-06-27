@@ -20,7 +20,9 @@
                 <div id="cat-image-box">
                     <!-- JS expects cat-image id to display image, id and class declared also in CONFIG -->
                     <img id="cat-image" class="cat-image" src="" alt="a random image of a cat" />
-                    <input id="copy-button" type="button" onclick="invokeCopyToClipBoard()">
+                    <div id="copy-button" type="button" onclick="invokeCopyToClipBoard()">
+                        <div class="tooltip">Click to Copy the Image URL!</div>
+                    </div>
                 </div>
                 <button id="get-image-button" class="cat-button" type="button" onclick="loadNewCatImage()">Give Cat!</button>
             </div>

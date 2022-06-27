@@ -66,6 +66,8 @@ article.cat-widget {
     right: 10px;
     top: 10px;
 
+    overflow: visible;
+
     width: 50px;
     height: 50px;
     border-radius: 7px;
@@ -81,7 +83,17 @@ article.cat-widget {
 #copy-button:hover {
     background-color: #4CAF50;
     border: 2px solid white;
+
+    display: flex;
+    z-index: 1;
 }
+
+#copy-button:hover > .tooltip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 #copy-button:active {
     background-color: #3ddb42;
@@ -90,6 +102,23 @@ article.cat-widget {
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+/* the tooltip is designed as it should here, then the display property is set to none to make it hidden */
+/* margins are the magic to make it appear out of its direct parent #copy-button */
+.tooltip {
+    display: none;
+    border-radius: 7px;
+
+    text-align: center;
+    line-height: 3;
+
+    width: 250px;
+    height: 50px;
+    margin-left: -250px;
+    margin-right: -250px;
+    
+    background-color: #03131a;
 }
 
 .cat-image {
