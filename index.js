@@ -91,7 +91,24 @@ function loadNewCatImage() {
 function invokeCopyToClipBoard() {
   const url = document.querySelector('#cat-image').src;
   copyTextToClipBoard(url);
+
+  const tooltipHover = document.querySelector('#tooltip-hover');
+  tooltipHover.style.display = 'none';
+  const tooltipActive = document.querySelector('#tooltip-active');
+  tooltipActive.style.display = 'flex';
+  
+  setTimeout(hideTooltip, 2000);
 }
+
+
+function hideTooltip() {
+  const element = document.querySelector('#tooltip-active');
+  element.style.display = 'none';
+  const tooltipHover = document.querySelector('#tooltip-hover');  
+  // tooltipHover.style.display = '';
+  tooltipHover.removeAttribute('style');
+}
+
 
 /**
  * @param {string} text - the text to copy to the clipboard
