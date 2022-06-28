@@ -101,10 +101,19 @@ function invokeCopyToClipBoard() {
 }
 
 
+/**
+ * hides the tooltip after activating the copy-button
+ */
 function hideTooltip() {
+  // XXX the same result might be achievable via css-only
+  // but we didn't know how to do it
   const element = document.querySelector('#tooltip-active');
   element.style.display = 'none';
   const tooltipHover = document.querySelector('#tooltip-hover');  
+
+  // The following two lines are the same solution to the same problem:
+  // Not leaving a "style" attribute to the html tag, which would take precedence
+  // over the css
   // tooltipHover.style.display = '';
   tooltipHover.removeAttribute('style');
 }
