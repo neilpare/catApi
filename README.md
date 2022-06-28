@@ -1,7 +1,3 @@
 # catApi
 
-blablabla
-
-yeeeeeees
-
-this git thing is strange
+https://neilpare.github.io/catApi/
