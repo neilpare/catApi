@@ -104,6 +104,11 @@ article.cat-widget {
     background-position: center;
 }
 
+#tooltip-active {
+    justify-content: center;
+    align-items: center;
+}
+
 /* the tooltip is designed as it should here, then the display property is set to none to make it hidden */
 /* margins are the magic to make it appear outside of its direct parent #copy-button */
 .tooltip {
