@@ -99,7 +99,8 @@ function invokeCopyToClipBoard() {
 function copyTextToClipBoard(text) {
   navigator.clipboard.writeText(text).then(
     // On success
-    () => alert('Url of image copied to clipboard')
+    ''
+    // () => alert('Url of image copied to clipboard')
   , 
     // On failure
     () => alert('There was an error copying url to clipboard')
